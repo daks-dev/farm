@@ -45,8 +45,9 @@
       </div>
     {:else}
       <div
+        in:fade={{ duration: 1500 }}
         out:fade={{ duration: 2500 }}
-        class="absolute top-0 left-0 h-inherit  aspect-square">
+        class="absolute top-0 left-0 h-inherit aspect-square">
         <Icon
           icon="fluent-emoji-high-contrast:cow-face"
           rel="image"

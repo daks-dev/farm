@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
   import LazyLoad from 'vanilla-lazyload';
-  import { Navbar, YandexMetrikaInit } from 'daks-svelte';
+  import { Navbar, ScreenBlock, YandexMetrikaInit } from 'daks-svelte';
 
   import '../app.css';
   import '$iconify';
@@ -12,6 +11,7 @@
   import app from '$lib/configs/app';
   import navigation from '$lib/configs/navigation';
 
+  // window.matchMedia('(prefers-color-scheme: dark)').matches
   if (!import.meta.env.SSR) {
     if (!('color-theme' in localStorage)) {
       localStorage.setItem('color-theme', 'dark');
@@ -42,6 +42,15 @@
 
 <slot />
 
-<Navbar {...navigation.navbar} />
+<Navbar
+  class="bg-neutral-50 dark:bg-transparent
+         fixed:bg-neutral-700/80 dark:fixed:bg-slate-700/80
+         shadow-md fixed:shadow-lg"
+  {...navigation.navbar} />
+
+<ScreenBlock
+  class="bg-neutral-100 dark:bg-gray-800"
+  delay={0}
+  duration={300} />
 
 <YandexMetrikaInit />

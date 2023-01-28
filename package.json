@@ -1,6 +1,6 @@
 {
-  "name": "farm.svelte",
-  "version": "0.0.3",
+  "name": "farm",
+  "version": "0.0.4",
   "description": "farm in tula region",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "author": "DVA",
   "homepage": "https://farm71.ru",
-  "private": true,
+  "private": false,
   "scripts": {
     "clean": "rimraf .svelte-kit && rimraf build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

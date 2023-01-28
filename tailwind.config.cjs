@@ -23,8 +23,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        loading: 'url(daks-svelte/assets/icons/loading/0.svg)',
-        'loading-data': 'url(daks-svelte/assets/icons/loading/data.svg)'
+        'loading-data': 'url(daks-svelte/assets/icons/spinners/blocks-scale.svg)'
       }
     }
   },

@@ -3,7 +3,7 @@ const config = {
     links: [
       {
         href: '/admin',
-        label: 'Admin'
+        label: 'Iconify'
       }
     ]
   }
