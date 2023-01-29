@@ -43,14 +43,13 @@
 <slot />
 
 <Navbar
-  class="bg-neutral-50 dark:bg-transparent
+  class="bg-neutral-50 dark:bg-inherit
          fixed:bg-neutral-700/80 dark:fixed:bg-slate-700/80
-         shadow-md fixed:shadow-lg"
+         shadow-sm dark:shadow-md fixed:shadow-lg"
   {...navigation.navbar} />
 
 <ScreenBlock
   class="bg-neutral-100 dark:bg-gray-800"
-  delay={0}
-  duration={300} />
+  delay={100} />
 
 <YandexMetrikaInit />
