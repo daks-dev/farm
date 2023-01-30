@@ -21,7 +21,7 @@
   {description} />
 
 <main
-  class="justify-center items-center text-center h-screen mb-0 overflow-hidden"
+  class="justify-center items-center text-center grow overflow-hidden"
   itemprop="mainContentOfPage">
   <div
     use:confetti={{

@@ -1,6 +1,6 @@
 <script lang="ts">
   import LazyLoad from 'vanilla-lazyload';
-  import { Navbar, ScreenBlock, YandexMetrikaInit } from 'daks-svelte';
+  import { Navbar, Footer, ScreenBlock, YandexMetrikaInit } from 'daks-svelte';
 
   import '../app.css';
   import '$iconify';
@@ -8,8 +8,7 @@
   //import type { PageData } from './$types';
   //export let data: PageData;
 
-  import app from '$lib/configs/app';
-  import navigation from '$lib/configs/navigation';
+  import {app, navigation} from '$lib/configs';
 
   // window.matchMedia('(prefers-color-scheme: dark)').matches
   if (!import.meta.env.SSR) {
@@ -41,6 +40,10 @@
 </svelte:head>
 
 <slot />
+
+<Footer
+  class="bg-neutral-200/50 dark:bg-inherit"
+  {...navigation.footer} />
 
 <Navbar
   class="bg-neutral-50 dark:bg-inherit

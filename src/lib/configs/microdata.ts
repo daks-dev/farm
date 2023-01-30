@@ -2,7 +2,7 @@ const config = {
   organization: {
     itemtype: 'http://schema.org/Organization',
     name: '',
-    logo: '/assets/images/logo.webp',
+    logo: '/images/logo.webp',
     email: 'mail@',
     telephone: '',
     address: {
