@@ -32,8 +32,19 @@
 </svelte:head>
 
 <main>
-  <header class="content">
-    <h1 class="title">Iconify</h1>
+  <header class="content flex items-center gap-8">
+    <h1 class="title grow">Iconify</h1>
+    <a
+      rel="noreferrer nofollow"
+      class="w-24 sm:w-32 hover:scale-110
+             transition-all duration-300 ease-in-out"
+      href="https://github.com/daks-dev"
+      target="_blank">
+      <img
+        class="w-full h-auto"
+        src="/icons/github.svg"
+        alt="GitHUB" />
+    </a>
   </header>
 
   {#if import.meta.env?.DEV}
