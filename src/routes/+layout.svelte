@@ -1,12 +1,12 @@
 <script lang="ts">
   import LazyLoad from 'vanilla-lazyload';
-  import { Navbar, Footer, ScreenBlock, YandexMetrikaInit } from 'daks-svelte';
+  import { YandexMetrikaInit, RouteTransition, Footer, Navbar, ScreenBlock } from 'daks-svelte';
 
   import '../app.css';
   import '$iconify';
 
-  //import type { PageData } from './$types';
-  //export let data: PageData;
+  import type { PageData } from './$types';
+  export let data: PageData;
 
   import {app, navigation} from '$lib/configs';
 
@@ -39,7 +39,12 @@
     content={app.shortName} />
 </svelte:head>
 
-<slot />
+<RouteTransition
+  referesh={data.referesh}
+  mode={1}
+  class="flex flex-col grow">
+  <slot />
+</RouteTransition>
 
 <Footer
   class="bg-neutral-200/50 dark:bg-inherit"
