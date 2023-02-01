@@ -28,7 +28,7 @@
   <meta
     name="robots"
     content="noindex, follow" />
-  <title>DAKS PKG • Iconify</title>
+  <title>Ферма 71 • Iconify</title>
 </svelte:head>
 
 <main>

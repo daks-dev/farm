@@ -8,6 +8,8 @@
   const description = 'Фермерское хозяйство в Тульской области';
 
   const size = '100%';
+  const year = new Date().getFullYear();
+
   let visible = false;
   onMount(() =>
     setTimeout(() => {
@@ -57,12 +59,11 @@
       </div>
     {/if}
   </div>
-  <h3 class="mb-8 whitespace-nowrap text-3xl text-slate-400">&copy; Ферма 71</h3>
   <a
     rel="noreferrer nofollow"
     class="button whitespace-nowrap hover:text-gray-100 hover:bg-slate-500"
     href="https://kit.svelte.dev"
     target="_blank">
-    2022 &star; Svelte.Kit
+    {year} &star; Svelte.Kit
   </a>
 </main>
