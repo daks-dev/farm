@@ -1,3 +1,4 @@
+import { DEV } from 'esm-env';
 import { addCollection } from '@iconify/svelte/offline';
 
 import bundles from './bundles.json';
@@ -10,7 +11,12 @@ const custom: string[] = [
   // 'blocks-wave',
   // 'dots-scale-rotate'
 ];
-// import.meta.env?.DEV && custom.forEach(async (val) => await import(`./custom/${val}`));
+
+/*
+if (BROWSER)
+  for (const file of custom)
+    import(`./custom/${file}`).then(() => console.log(file)).catch((e) => console.error(e));
+*/
 
 // import './custom/svelte-logo';
 // import './custom/bars-scale-bottom';
@@ -20,4 +26,4 @@ import './custom/blocks-scale';
 
 export default custom;
 
-console.debug('CSR iconify');
+DEV && console.debug('CSR iconify');

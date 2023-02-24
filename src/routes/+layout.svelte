@@ -1,6 +1,13 @@
 <script lang="ts">
-  import LazyLoad from 'vanilla-lazyload';
-  import { YandexMetrikaInit, RouteTransition, Footer, Navbar, ScreenBlock } from 'daks-svelte';
+  import { BROWSER } from 'esm-env';
+  import {
+    lazyload,
+    YandexMetrikaInit,
+    RouteTransition,
+    Footer,
+    Navbar,
+    ScreenBlock
+  } from 'daks-svelte';
 
   import '../app.css';
   import '$iconify';
@@ -8,19 +15,15 @@
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import {app, navigation} from '$lib/configs';
+  import { app, nav } from '$configs';
 
   // window.matchMedia('(prefers-color-scheme: dark)').matches
-  if (!import.meta.env.SSR) {
+  if (BROWSER) {
     if (!('color-theme' in localStorage)) {
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
     }
-    if (!document.lazyloadInstance)
-      document.lazyloadInstance = new LazyLoad({
-        // use_native: true,
-        threshold: 0
-      });
+    document.lazyload ??= lazyload();
   }
 </script>
 
@@ -40,21 +43,21 @@
 </svelte:head>
 
 <RouteTransition
+  class="flex flex-col grow"
   referesh={data.referesh}
-  mode={1}
-  class="flex flex-col grow">
+  mode="1">
   <slot />
 </RouteTransition>
 
 <Footer
   class="bg-neutral-200/50 dark:bg-inherit"
-  {...navigation.footer} />
+  {...nav.footer} />
 
 <Navbar
   class="bg-neutral-50 dark:bg-inherit
-         fixed:bg-neutral-700/90 dark:fixed:bg-slate-700/90
+         fixed:bg-neutral-50/95 dark:fixed:bg-slate-700/95
          shadow-sm dark:shadow-md fixed:shadow-lg"
-  {...navigation.navbar} />
+  {...nav.navbar} />
 
 <ScreenBlock
   class="bg-neutral-100 dark:bg-gray-800"

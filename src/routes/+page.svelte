@@ -40,10 +40,10 @@
         class="absolute top-0 left-0 h-inherit aspect-square">
         <Icon
           icon="cib:happycow"
-          rel="image"
           class="py-8 opacity-75 hover:scale-125 duration-500"
           width={size}
-          height={size} />
+          height={size}
+          role="image" />
       </div>
     {:else}
       <div
@@ -52,10 +52,10 @@
         class="absolute top-0 left-0 h-inherit aspect-square">
         <Icon
           icon="fluent-emoji-high-contrast:cow-face"
-          rel="image"
           class="py-8 opacity-75"
           width={size}
-          height={size} />
+          height={size}
+          role="image" />
       </div>
     {/if}
   </div>

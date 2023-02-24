@@ -1,12 +1,16 @@
 {
   "name": "farm",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "farm in tula region",
   "repository": {
     "type": "git",
     "url": "https://github.com/daks-dev/farm.git"
   },
-  "author": "DVA",
+  "author": {
+    "name": "DVA",
+    "email": "mail@daks.dev",
+    "url": "https://daks.dev"
+  },
   "homepage": "https://farm71.ru",
   "private": false,
   "scripts": {
@@ -43,6 +47,7 @@
     "eslint": "*",
     "eslint-config-prettier": "*",
     "eslint-plugin-svelte3": "*",
+    "esm-env": "*",
     "postcss": "*",
     "postcss-import": "*",
     "postcss-load-config": "*",

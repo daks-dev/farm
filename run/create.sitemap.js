@@ -8,7 +8,7 @@ const disallow = ['admin', 'search'];
 
 //const __dirname = process.cwd();
 //const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, './package.json'), 'utf8'));
-const siteUrl = new URL(process.env.VITE_APP_CANONICAL || '.').origin;
+const siteUrl = new URL(process.env.APP_CANONICAL || '.').origin;
 const sitemapFile = path.resolve(process.cwd(), 'static/sitemap.xml');
 
 const PAGE_PRIORITY = 0.7;
